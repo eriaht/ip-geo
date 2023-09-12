@@ -1,6 +1,9 @@
 # ip-geo
 This script uses the traceroute or tracert tool (depending on your system OS) and outputs the city name and country of each router along the way.
 
+### Troubleshooting
+If the script seems to be "hung up" check the tracerouteout.txt file look * in the output. The * indicates a response what not received at that hop, the request will time out for 5 seconds before sending another request. Wait for tracert to finish or press control + C to end the program.
+
 ```
 pip3 install requests
 python ip_geo.py --ip=150.31.249.103
