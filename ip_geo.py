@@ -51,14 +51,17 @@ try:
                     res = req.json()
                     # Get the city and country 
                     city = ''
+                    region_name = ''
                     country = ''
                     for key, value in res.items():
                         if key == "city":
                             city = value
+                        if key == "regionName":
+                            region_name = value
                         if key == "country":
                             country = value
 
-                    ip_geo["location"] = f"{city}, {country}"
+                    ip_geo["location"] = f"{city}, {region_name}, {country}"
 
                     print(f"IP: {ip}, Location: {ip_geo['location']}")
                 else:
