@@ -28,4 +28,9 @@ IP: 103.249.31.150, Location: Gasan-dong, South Korea
 IP: 150.31.249.103, Location: Tokyo, Japan
 ```
 
+I am getting the geolocation data from [https://ip-api.com/]
+
+<img width="1103" alt="ip-api.com response json with a map of the geolocation" src="https://github.com/eriaht/ip-geo/assets/44909814/5e590683-1bee-47c0-a6c2-a604fa82c3f7">
+
+
 
