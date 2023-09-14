@@ -10,13 +10,14 @@ python ip_geo.py --ip=150.31.249.103
 ```
 
 ### Options
+```
 -w : Set the time (in seconds) to wait for a response to a probe.
     Usage: python ip_geo.py --ip=150.31.249.103 -w=1
 -m : Set the max_ttl (max number of hops) used in outgoing probe packets.
     Usage: python ip_geo.py --ip=150.31.249.103 -m=15
 
 Combine both: python ip_geo.py --ip=150.31.249.103 -w=1 -m=15
-
+```
 
 ## Output
 ```
