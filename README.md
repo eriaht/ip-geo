@@ -19,7 +19,7 @@ python ip_geo.py --ip=150.31.249.103
 Combine both: python ip_geo.py --ip=150.31.249.103 -w=1 -m=15
 ```
 
-## Output
+### Output
 ```
 IP: 192.168.1.1, Location: , 
 IP: Redacted, Location: Redacted
