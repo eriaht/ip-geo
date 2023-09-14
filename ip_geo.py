@@ -12,7 +12,10 @@ parser = argparse.ArgumentParser(
 						usage='python ip_geo.py --ip=210.213.125.186',
 						description='Follow the location of each router!')
 
-parser.add_argument("--ip", dest="ip", help="Value should and IP address")
+# Create arguments
+parser.add_argument("--ip", dest="ip", help="Set the ip address.")
+parser.add_argument("-w", dest="timeout", help="Set the time (in seconds) to wait for a response to a probe.")
+parser.add_argument("-m", dest="max_ttl", help="Set the max_ttl (max number of hops) used in outgoing probe packets.")
 
 # Get arguments
 args = parser.parse_args()
@@ -21,11 +24,23 @@ if args.ip == None:
     parser.print_help()
     exit()
 
+print("Tracing the route this may take a while...")
+
 # Execute traceroute then send the output to tracerouteout.txt
 if platform.system() == "Windows":
-    os.system(f"tracert {args.ip} > tracerouteout.txt")
+    # Set system defaults
+    if args.max_ttl == None:
+        args.max_ttl = 30
+    if args.timeout == None:
+        args.timeout = 4
+    os.system(f"tracert /w {args.timeout} /h {args.max_ttl} {args.ip} > tracerouteout.txt")
 else:
-    os.system(f"traceroute {args.ip} > tracerouteout.txt")
+    # Set system defaults
+    if args.max_ttl == None:
+        args.max_ttl = 64
+    if args.timeout == None:
+        args.timeout = 5
+    os.system(f"traceroute -w {args.timeout} -m {args.max_ttl} {args.ip} > tracerouteout.txt")
 
 try:
     # Read from tracerouteout.txt
