@@ -52,7 +52,7 @@ try:
                 break
 
             # Get IP addresses from each line
-            ips = set(re.findall("(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})", line))
+            ips = set(re.findall(r"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})", line))
 
             # Loop through each ip 
             for i, ip in enumerate(ips):
