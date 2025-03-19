@@ -27,8 +27,8 @@ IP: Redacted, Location: Redacted
 IP: Redacted, Location: Redacted
 IP: Redacted, Location: Redacted
 IP: Redacted, Location: Redacted
-IP: 66.109.0.247, Location: Miami, Florida, United States
-IP: 66.109.5.131, Location: Miami, Florida, United States
+IP: 66.109.0.247, Location: Redacted
+IP: 66.109.5.131, Location: Redacted
 IP: 204.148.176.65, Location: Cranbury, New Jersey, United States
 IP: 204.148.156.58, Location: St Louis, Missouri, United States
 IP: 58.138.81.81, Location: Chiyoda, Tokyo, Japan
